@@ -1,0 +1,5 @@
+#Create an index in elasticsearch domain
+curl -u master_username:master_password -X PUT "<ES_URL>/restaurants?pretty"
+
+#Bulk upload data to elastic search index
+curl -XPUT -u 'master_username:master_password' '<ES URL>/restaurants/_bulk?pretty' --data-binary @elkfile.json -H 'Content-Type: application/json'
